@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "charset": "utf-8",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "target": "es5",
+    "jsx": "react",
+    "lib": [
+      "es5",
+      "es2015",
+      "es2017",
+      "dom"
+    ],
+    "typeRoots": [
+      "typings",
+      "node_modules/@types"
+    ]
+  },
+  "includes": [
+    "src/js/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
