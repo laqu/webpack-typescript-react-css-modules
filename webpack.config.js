@@ -22,14 +22,20 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:5]',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                localIdentName: '[name]--[local]--[hash:base64:5]'
+              }
+            }
+          },
           {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: [
-                autoprefixer()
-              ]
+              plugins: [autoprefixer()]
             }
           }
         ]
