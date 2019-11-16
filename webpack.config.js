@@ -1,8 +1,7 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
-import * as autoprefixer from 'autoprefixer';
+const path = require('path');
+const autoprefixer = require('autoprefixer');
 
-const config: webpack.Configuration = {
+module.exports = {
   entry: './src/js/main.tsx',
   output: {
     path: path.resolve(__dirname, './public/js'),
@@ -16,7 +15,7 @@ const config: webpack.Configuration = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: 'awesome-typescript-loader'
+        use: 'ts-loader'
       },
       {
         test: /\.css$/,
@@ -47,5 +46,3 @@ const config: webpack.Configuration = {
     }
   }
 };
-
-export default config;
