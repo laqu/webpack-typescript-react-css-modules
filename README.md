@@ -4,5 +4,5 @@ yarn
 ```
 2.
 ```
-yarn develop
+yarn development
 ```
